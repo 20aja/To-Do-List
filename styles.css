@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --background: #000430;
+  --secondaryBackground: #171c48;
+  --text: #fff;
+  --purple: #828dff;
+  --teal: #24feee;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s linear;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: white;
+}
+
+.container {
+  text-align: center;
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  margin: 0 20px;
+  width: 350px;
+  position: relative;
+  overflow-x: hidden;
+  height: 450px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--purple);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondaryBackground);
+  border-radius: 4px;
+}
+.container > h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px auto 10px;
+}
+.container .add-task {
+  width: 90%;
+  margin: 0 auto 40px;
+  position: relative;
+  overflow: hidden;
+}
+.container .add-task input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #999;
+  color: #fff;
+  outline: none;
+  padding: 0 40px 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.container .add-task input:focus {
+  border-bottom: 2px solid var(--purple);
+}
+.container .add-task input::placeholder {
+  font-size: 14px;
+  color: #666;
+  text-transform: capitalize;
+}
+.container .add-task input:focus::placeholder {
+  color: transparent;
+}
+.container .add-task .add {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: inherit;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+}
+.container .add-task .add:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.container .hr {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  outline: none;
+  border: none;
+  background-color: var(--purple);
+  margin: 10px 0;
+  margin-bottom: 40px;
+}
+.container .hr span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background);
+  color: #fff;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  border: 2px solid var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container .task-name {
+  position: relative;
+  width: 90%;
+  height: 31px;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+.container .task-name .my-task {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-weight: 500;
+  text-align: left;
+  padding: 4px 10px;
+}
+.container .task-name .edit,
+.container .task-name .delete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.container .task-name img {
+  width: 100%;
+  height: 100%;
+}
+.container .task-name .delete {
+  right: 35px;
+}
+.box {
+  padding-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid var(--purple);
+}
